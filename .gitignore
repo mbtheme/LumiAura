@@ -1,0 +1,26 @@
+# Build / cache
+dist/
+build/
+.cache/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Wrangler (Cloudflare Pages local artifacts)
+.wrangler/
+
+# Backups (keep only committed versions)
+*.backup
+*.bak
+
+# IDE
+.vscode/
+.idea/
