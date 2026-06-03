@@ -174,26 +174,6 @@
 </div>
 </section>
 
-<!-- Trust Bar -->
-<section class="trust-bar">
-<div class="container trust-grid">
-<div class="trust-item">
-<div class="trust-icon-wrap"><svg class="icon icon-md"><use href="#icon-shield"/></svg></div>
-<h3>Fiabilité</h3>
-<p>Toujours à l'heure. Respect des engagements. Sans frais cachés.</p>
-</div>
-<div class="trust-item">
-<div class="trust-icon-wrap"><svg class="icon icon-md"><use href="#icon-star"/></svg></div>
-<h3>Satisfaction garantie</h3>
-<p>Retour gratuit sous 24h si vous n'êtes pas satisfait.</p>
-</div>
-<div class="trust-item">
-<div class="trust-icon-wrap"><svg class="icon icon-md"><use href="#icon-zap"/></svg></div>
-<h3>Efficacité</h3>
-<p>Procédés optimisés. Résultats impeccables, sans compromis.</p>
-</div>
-</div>
-</section>
 
 <!-- Video Break -->
 <section class="video-break">
@@ -240,11 +220,84 @@
 <h2>Galerie avant / après</h2>
 <p>Découvrez la différence Lumiaura sur vos propres yeux.</p>
 </div>
+<div class="gallery-tabs">
+  <button class="gallery-tab active" data-index="0">Allée</button>
+  <button class="gallery-tab" data-index="1">Muret</button>
+  <button class="gallery-tab" data-index="2">Allée pavée</button>
+  <button class="gallery-tab" data-index="3">Gouttières</button>
+</div>
 <div class="gallery-grid">
-<div class="gallery-item large"><img src="assets/images/gallery1.jpg" alt="Avant/Après - Lavage pression allée" loading="lazy"></div>
-<div class="gallery-item"><img src="assets/images/gallery2.jpg" alt="Avant/Après - Lavage pression" loading="lazy"></div>
-<div class="gallery-item"><img src="assets/images/gallery3.jpg" alt="Avant/Après - Lavage pression allée pavée" loading="lazy"></div>
-<div class="gallery-item large"><img src="assets/images/gallery4.jpg" alt="Avant/Après - Nettoyage gouttières" loading="lazy"></div>
+  <!-- Card 1 -->
+  <div class="gallery-card active">
+    <div class="before-after-slider" style="--clip-percent: 50%;">
+      <img src="assets/images/gallery1_before.jpg" alt="Avant - Lavage pression allée" class="img-before" loading="lazy">
+      <img src="assets/images/gallery1_after.jpg" alt="Après - Lavage pression allée" class="img-after" loading="lazy">
+      <div class="slider-handle" style="left: 50%;">
+        <div class="slider-button">
+          <svg viewBox="0 0 24 24" class="slider-arrow-icon"><path d="M8 7l-5 5 5 5V7zm8 0l5 5-5 5V7z" fill="currentColor"/></svg>
+        </div>
+      </div>
+      <span class="badge-label label-before">Avant</span>
+      <span class="badge-label label-after">Après</span>
+    </div>
+    <div class="gallery-card-info">
+      <h3>Lavage à pression — Allée</h3>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="gallery-card">
+    <div class="before-after-slider" style="--clip-percent: 50%;">
+      <img src="assets/images/gallery2_before.jpg" alt="Avant - Lavage pression" class="img-before" loading="lazy">
+      <img src="assets/images/gallery2_after.jpg" alt="Après - Lavage pression" class="img-after" loading="lazy">
+      <div class="slider-handle" style="left: 50%;">
+        <div class="slider-button">
+          <svg viewBox="0 0 24 24" class="slider-arrow-icon"><path d="M8 7l-5 5 5 5V7zm8 0l5 5-5 5V7z" fill="currentColor"/></svg>
+        </div>
+      </div>
+      <span class="badge-label label-before">Avant</span>
+      <span class="badge-label label-after">Après</span>
+    </div>
+    <div class="gallery-card-info">
+      <h3>Lavage à pression — Muret</h3>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="gallery-card">
+    <div class="before-after-slider" style="--clip-percent: 50%;">
+      <img src="assets/images/gallery3_before.jpg" alt="Avant - Lavage pression allée pavée" class="img-before" loading="lazy">
+      <img src="assets/images/gallery3_after.jpg" alt="Après - Lavage pression allée pavée" class="img-after" loading="lazy">
+      <div class="slider-handle" style="left: 50%;">
+        <div class="slider-button">
+          <svg viewBox="0 0 24 24" class="slider-arrow-icon"><path d="M8 7l-5 5 5 5V7zm8 0l5 5-5 5V7z" fill="currentColor"/></svg>
+        </div>
+      </div>
+      <span class="badge-label label-before">Avant</span>
+      <span class="badge-label label-after">Après</span>
+    </div>
+    <div class="gallery-card-info">
+      <h3>Lavage à pression — Allée pavée</h3>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="gallery-card">
+    <div class="before-after-slider" style="--clip-percent: 50%;">
+      <img src="assets/images/gallery4_before.webp" alt="Avant - Nettoyage gouttières" class="img-before" loading="lazy">
+      <img src="assets/images/gallery4_after.webp" alt="Après - Nettoyage gouttières" class="img-after" loading="lazy">
+      <div class="slider-handle" style="left: 50%;">
+        <div class="slider-button">
+          <svg viewBox="0 0 24 24" class="slider-arrow-icon"><path d="M8 7l-5 5 5 5V7zm8 0l5 5-5 5V7z" fill="currentColor"/></svg>
+        </div>
+      </div>
+      <span class="badge-label label-before">Avant</span>
+      <span class="badge-label label-after">Après</span>
+    </div>
+    <div class="gallery-card-info">
+      <h3>Nettoyage de gouttières</h3>
+    </div>
+  </div>
 </div>
 </div>
 </section>
@@ -580,6 +633,67 @@
         btn.innerHTML = '<svg class="icon icon-sm" style="vertical-align:middle;margin-right:6px"><use href="#icon-mail"/></svg> Envoyer ma demande';
         btn.disabled = false;
       }, 3000);
+    });
+  });
+})();
+
+// Before-After interactive sliders
+(function(){
+  console.log("Initializing before-after sliders...");
+  var sliders = document.querySelectorAll('.before-after-slider');
+  sliders.forEach(function(slider){
+    var handle = slider.querySelector('.slider-handle');
+    if (!handle) return;
+    
+    var isDragging = false;
+    
+    function update(clientX) {
+      var rect = slider.getBoundingClientRect();
+      var x = clientX - rect.left;
+      var position = x / rect.width;
+      if (position < 0) position = 0;
+      if (position > 1) position = 1;
+      var percent = position * 100;
+      slider.style.setProperty('--clip-percent', percent + '%');
+      handle.style.left = percent + '%';
+    }
+    
+    slider.addEventListener('pointerdown', function(e){
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      e.preventDefault(); // Empêche le drag d'image natif ou la sélection
+      isDragging = true;
+      update(e.clientX);
+    });
+    
+    document.addEventListener('pointermove', function(e){
+      if (!isDragging) return;
+      update(e.clientX);
+    });
+    
+    document.addEventListener('pointerup', function(e){
+      isDragging = false;
+    });
+    
+    document.addEventListener('pointercancel', function(e){
+      isDragging = false;
+    });
+  });
+})();
+
+// Gallery mobile tabs switching
+(function(){
+  var tabs = document.querySelectorAll('.gallery-tab');
+  var cards = document.querySelectorAll('.gallery-grid .gallery-card');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      cards.forEach(function(c){ c.classList.remove('active'); });
+      
+      tab.classList.add('active');
+      var idx = parseInt(tab.getAttribute('data-index'), 10);
+      if (cards[idx]) {
+        cards[idx].classList.add('active');
+      }
     });
   });
 })();
