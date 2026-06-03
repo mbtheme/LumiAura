@@ -3,7 +3,12 @@
 **Live:** https://lumiaura.ca  
 **Platform:** Cloudflare Pages (Upload assets)  
 **Project name:** lumiaura-site-rev1  
-**Preview URL:** https://lumiaura-site-rev1.pages.dev
+**Preview URL:** https://lumiaura-site-rev1.pages.dev  
+**GitHub:** https://github.com/mbtheme/LumiAura
+
+## Stack
+
+Site statique pur — HTML + CSS + JS. Aucun framework, aucun build step.
 
 ## Structure
 
@@ -17,16 +22,29 @@ lumiaura-site/
 │   └── videos/         # Hero + IG reel videos
 ```
 
-## Deploy Steps (Lumi can do this)
+## Run Locally
 
-1. Edit files in `/home/geppo/.openclaw/workspace/lumiaura-site/`
-2. Use Cloudflare API to deploy via Pages upload endpoint
-3. Or: Geppo manually drags folder into Cloudflare Dashboard → Pages → Upload assets
+```bash
+# Option 1: any static server
+npx serve -s .
+
+# Option 2: Python
+python3 -m http.server 8080
+```
+
+## Deploy
+
+Deploy via Cloudflare Pages with wrangler:
+
+```bash
+CLOUDFLARE_API_TOKEN=$(cat ~/.config/cloudflare/env | grep TOKEN | cut -d= -f2) \
+  wrangler pages deploy /home/geppo/.openclaw/workspace/lumiaura-site/ \
+  --project-name=lumiaura-site-rev1 --branch=production
+```
 
 ## Form Submissions
 
-Quote form sends to `lumiaura1@outlook.com` via formsubmit.co
-Lumi monitors and alerts within 15 mins.
+Quote form sends to `lumiaura1@outlook.com` via formsubmit.co.
 
 ## Domain
 
