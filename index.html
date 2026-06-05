@@ -79,8 +79,8 @@
   <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
   <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
-  <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
-  <symbol id="icon-star-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="icon-star" viewBox="-2 -2 28 28" fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="icon-star-outline" viewBox="-2 -2 28 28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
   <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
   <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
   <symbol id="icon-window" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></symbol>
@@ -248,27 +248,26 @@
         </video>
       </div>
 
-      <div class="scrolly-overlays">
-        <div class="scrolly-overlay-card right-side active" data-step="0">
-          <span class="step-num-badge">01</span>
-          <h3>Soumission gratuite</h3>
-          <p>Réponse claire en moins de 24 heures, sans engagement.</p>
+      <div class="scrolly-steps">
+        <div class="scrolly-step" data-step="0">
+          <div class="scrolly-step__circle"><div class="scrolly-step__circle-inner"><svg class="scrolly-step__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-star"/></svg></div></div>
+          <p class="scrolly-step__title">Soumission gratuite</p>
         </div>
-        <div class="scrolly-overlay-card left-side" data-step="1">
-          <span class="step-num-badge">02</span>
-          <h3>Équipe ponctuelle, assurée à 100 %</h3>
-          <p>À l’heure à chaque rendez-vous, et entièrement assurée.</p>
+        <div class="scrolly-step" data-step="1">
+          <div class="scrolly-step__circle"><div class="scrolly-step__circle-inner"><svg class="scrolly-step__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-star"/></svg></div></div>
+          <p class="scrolly-step__title">Équipe ponctuelle</p>
         </div>
-        <div class="scrolly-overlay-card right-side" data-step="2">
-          <span class="step-num-badge">03</span>
-          <h3>Tout mode de paiement accepté</h3>
-          <p>Carte, Interac ou comptant — réglé une fois le travail terminé.</p>
+        <div class="scrolly-step" data-step="2">
+          <div class="scrolly-step__circle"><div class="scrolly-step__circle-inner"><svg class="scrolly-step__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-star"/></svg></div></div>
+          <p class="scrolly-step__title">Assurée à 100 %</p>
         </div>
-        <div class="scrolly-overlay-card left-side" data-step="3">
-          <span class="step-num-badge">04</span>
-          <h3>Satisfait ou remboursé à 100 %</h3>
-          <p>Pas satisfait du résultat ? On revient gratuitement.</p>
-          <a href="#contact" class="btn btn-primary btn-cta-scroll">Obtenir un devis gratuit</a>
+        <div class="scrolly-step" data-step="3">
+          <div class="scrolly-step__circle"><div class="scrolly-step__circle-inner"><svg class="scrolly-step__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-star"/></svg></div></div>
+          <p class="scrolly-step__title">Tout mode de paiement</p>
+        </div>
+        <div class="scrolly-step" data-step="4">
+          <div class="scrolly-step__circle"><div class="scrolly-step__circle-inner"><svg class="scrolly-step__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-star"/></svg></div></div>
+          <p class="scrolly-step__title">Satisfait ou remboursé</p>
         </div>
       </div>
 
@@ -285,8 +284,8 @@
 </div>
 <div class="gallery-tabs">
   <button class="gallery-tab active" data-index="0">Allée</button>
-  <button class="gallery-tab" data-index="1">Muret</button>
-  <button class="gallery-tab" data-index="2">Allée pavée</button>
+  <button class="gallery-tab" data-index="1">Revêtement</button>
+  <button class="gallery-tab" data-index="2">Fenêtres</button>
   <button class="gallery-tab" data-index="3">Gouttières</button>
 </div>
 <div class="gallery-grid">
@@ -311,8 +310,8 @@
   <!-- Card 2 -->
   <div class="gallery-card">
     <div class="before-after-slider" style="--clip-percent: 50%;">
-      <img src="assets/images/gallery2_before.jpg" alt="Avant - Lavage pression" class="img-before" loading="lazy">
-      <img src="assets/images/gallery2_after.jpg" alt="Après - Lavage pression" class="img-after" loading="lazy">
+      <img src="assets/images/gallery2_after.jpg" alt="Avant - Lavage de revêtement mur vinyle" class="img-before" loading="lazy">
+      <img src="assets/images/gallery2_before.jpg" alt="Après - Lavage de revêtement mur vinyle" class="img-after" loading="lazy">
       <div class="slider-handle" style="left: 50%;">
         <div class="slider-button">
           <svg viewBox="0 0 24 24" class="slider-arrow-icon"><path d="M8 7l-5 5 5 5V7zm8 0l5 5-5 5V7z" fill="currentColor"/></svg>
@@ -322,15 +321,15 @@
       <span class="badge-label label-after">Après</span>
     </div>
     <div class="gallery-card-info">
-      <h3>Lavage à pression — Muret</h3>
+      <h3>Lavage de revêtement — Mur vinyle</h3>
     </div>
   </div>
 
   <!-- Card 3 -->
   <div class="gallery-card">
     <div class="before-after-slider" style="--clip-percent: 50%;">
-      <img src="assets/images/gallery3_before.jpg" alt="Avant - Lavage pression allée pavée" class="img-before" loading="lazy">
-      <img src="assets/images/gallery3_after.jpg" alt="Après - Lavage pression allée pavée" class="img-after" loading="lazy">
+      <img src="assets/images/gallery3_before.jpg" alt="Avant - Lavage de fenêtres intérieur et extérieur" class="img-before" loading="lazy">
+      <img src="assets/images/gallery3_after.jpg" alt="Après - Lavage de fenêtres intérieur et extérieur" class="img-after" loading="lazy">
       <div class="slider-handle" style="left: 50%;">
         <div class="slider-button">
           <svg viewBox="0 0 24 24" class="slider-arrow-icon"><path d="M8 7l-5 5 5 5V7zm8 0l5 5-5 5V7z" fill="currentColor"/></svg>
@@ -340,7 +339,7 @@
       <span class="badge-label label-after">Après</span>
     </div>
     <div class="gallery-card-info">
-      <h3>Lavage à pression — Allée pavée</h3>
+      <h3>Lavage de fenêtres — Intérieur / Extérieur</h3>
     </div>
   </div>
 
@@ -605,103 +604,106 @@
 <section id="contact" class="quote-section">
 <div class="container quote-grid">
 <div class="quote-info">
-<span class="section-tag">Contactez-nous</span>
-<h2>Demandez votre devis gratuit</h2>
-<p>Réponse garantie sous 24 heures. Sans engagement, sans frais cachés.</p>
-<div class="contact-details">
-<div class="contact-item">
-<svg class="icon icon-md" style="color:var(--accent)"><use href="#icon-phone"/></svg>
-<div>
-<strong>Téléphone</strong>
-<a href="tel:+15149236906">514-923-6906</a>
+<span class="section-tag">Devis gratuit</span>
+<h2>Demandez votre soumission</h2>
+<p>Deux minutes suffisent. On vous revient avec un prix clair, tout inclus — sans engagement.</p>
+
+<ol class="quote-steps">
+<li class="quote-step">
+<span class="quote-step__num">1</span>
+<div class="quote-step__body">
+<strong>Vous remplissez le formulaire</strong>
+<p>Dites-nous ce dont vous avez besoin. Aucun compte, aucune obligation.</p>
 </div>
+</li>
+<li class="quote-step">
+<span class="quote-step__num">2</span>
+<div class="quote-step__body">
+<strong>On vous répond sous 24 h</strong>
+<p>Un prix précis et transparent, sans frais cachés ni mauvaise surprise.</p>
 </div>
-<div class="contact-item">
-<svg class="icon icon-md" style="color:var(--accent)"><use href="#icon-mail"/></svg>
-<div>
-<strong>Courriel</strong>
-<a href="mailto:lumiaura1@outlook.com">lumiaura1@outlook.com</a>
+</li>
+<li class="quote-step">
+<span class="quote-step__num">3</span>
+<div class="quote-step__body">
+<strong>On planifie l'intervention</strong>
+<p>Au moment qui vous convient. Satisfait ou remboursé, à chaque visite.</p>
 </div>
-</div>
-<div class="contact-item">
-<svg class="icon icon-md" style="color:var(--accent)"><use href="#icon-map-pin"/></svg>
-<div>
-<strong>Zone de service</strong>
-<p>Grande région de Montréal</p>
-</div>
-</div>
-<div class="contact-item">
-<svg class="icon icon-md" style="color:var(--accent)"><use href="#icon-shield"/></svg>
-<div>
-<strong>Assuré &amp; garanti</strong>
-<p>Assurances complètes en règle</p>
-</div>
-</div>
+</li>
+</ol>
+
+<div class="quote-reassure">
+<span><svg class="icon icon-xs"><use href="#icon-star"/></svg> 5 / 5 sur Google</span>
+<span><svg class="icon icon-xs"><use href="#icon-zap"/></svg> Réponse en 24 h</span>
+<span><svg class="icon icon-xs"><use href="#icon-shield"/></svg> Satisfait ou remboursé</span>
 </div>
 </div>
 
 <div class="quote-form">
 <form id="quoteForm">
-<div style="display:none"><input type="text" name="_honey"></div>
+<div class="visually-hidden" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
 
 <div class="form-row">
 <div class="form-group">
 <label for="name">Nom complet</label>
-<input type="text" id="name" name="name" required placeholder="Votre nom">
+<input type="text" id="name" name="name" required autocomplete="name" placeholder="Votre nom">
 </div>
 <div class="form-group">
 <label for="phone">Téléphone</label>
-<input type="tel" id="phone" name="phone" required placeholder="514-000-0000" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" title="Veuillez entrer un numéro de téléphone valide à 10 chiffres (ex: 514-123-4567)">
+<input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="514-000-0000" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" title="Veuillez entrer un numéro de téléphone valide à 10 chiffres (ex: 514-123-4567)">
 </div>
 </div>
 
 <div class="form-row">
 <div class="form-group">
 <label for="email">Courriel</label>
-<input type="email" id="email" name="email" required placeholder="votre@courriel.com">
+<input type="email" id="email" name="email" required autocomplete="email" inputmode="email" placeholder="votre@courriel.com">
 </div>
 <div class="form-group">
+<label for="address">Adresse du chantier <span class="form-optional">(facultatif)</span></label>
+<input type="text" id="address" name="address" autocomplete="street-address" placeholder="123 Rue Exemple, Montréal">
+</div>
+</div>
+
+<div class="form-group full">
 <label>Services souhaités</label>
-<div class="checkbox-group">
-<label class="checkbox-label"><input type="checkbox" name="service" value="Lavage de vitres résidentiel"><span>Vitres résidentiel</span></label>
-<label class="checkbox-label"><input type="checkbox" name="service" value="Lavage de vitres commercial"><span>Vitres commercial</span></label>
-<label class="checkbox-label"><input type="checkbox" name="service" value="Nettoyage de gouttières"><span>Nettoyage de gouttières</span></label>
-<label class="checkbox-label"><input type="checkbox" name="service" value="Lavage de pression"><span>Lavage de pression</span></label>
-<label class="checkbox-label"><input type="checkbox" name="service" value="Lavage de revêtement"><span>Lavage de revêtement</span></label>
-<label class="checkbox-label"><input type="checkbox" name="service" value="Autre"><span>Autre / Non sûr(e)</span></label>
-</div>
+<div class="service-chips">
+<label class="service-chip"><input type="checkbox" name="service" value="Lavage de vitres résidentiel"><span><svg class="icon icon-xs"><use href="#icon-home"/></svg> Vitres résidentiel</span></label>
+<label class="service-chip"><input type="checkbox" name="service" value="Lavage de vitres commercial"><span><svg class="icon icon-xs"><use href="#icon-building"/></svg> Vitres commercial</span></label>
+<label class="service-chip"><input type="checkbox" name="service" value="Nettoyage de gouttières"><span><svg class="icon icon-xs"><use href="#icon-droplet"/></svg> Gouttières</span></label>
+<label class="service-chip"><input type="checkbox" name="service" value="Lavage de pression"><span><svg class="icon icon-xs"><use href="#icon-pressure"/></svg> Lavage à pression</span></label>
+<label class="service-chip"><input type="checkbox" name="service" value="Lavage de revêtement"><span><svg class="icon icon-xs"><use href="#icon-window"/></svg> Revêtement</span></label>
+<label class="service-chip"><input type="checkbox" name="service" value="Autre"><span><svg class="icon icon-xs"><use href="#icon-check"/></svg> Autre / Non sûr(e)</span></label>
 </div>
 </div>
 
 <div class="form-group full">
-<label for="address">Adresse du chantier</label>
-<input type="text" id="address" name="address" placeholder="123 Rue Exemple, Montréal">
+<label for="message">Détails du projet <span class="form-optional">(facultatif)</span></label>
+<textarea id="message" name="message" rows="4" placeholder="Type de bâtiment, nombre de vitres, accès, étages…"></textarea>
 </div>
 
-<div class="form-group full">
-<label for="message">Détails du projet</label>
-<textarea id="message" name="message" rows="4" placeholder="Décrivez votre besoin : type de bâtiment, nombre de vitres, accès, etc."></textarea>
-</div>
-
-<div id="formPreview" class="form-preview" style="display:none;">
-<h4>📋 Résumé de votre demande</h4>
-<div id="previewContent"></div>
-</div>
-<button type="submit" class="btn btn-primary btn-full"><svg class="icon icon-sm" style="vertical-align:middle;margin-right:6px"><use href="#icon-mail"/></svg> Envoyer ma demande</button>
-<p class="form-note"><svg class="icon icon-xs" style="vertical-align:middle;margin-right:4px"><use href="#icon-lock"/></svg> Vos données sont protégées. Nous ne les partageons jamais.</p>
+<button type="submit" class="btn btn-primary btn-full"><svg class="icon icon-sm" style="vertical-align:middle;margin-right:8px"><use href="#icon-mail"/></svg> Envoyer ma demande</button>
+<p class="form-note"><svg class="icon icon-xs" style="vertical-align:middle;margin-right:4px"><use href="#icon-lock"/></svg> Vos données restent confidentielles. Aucun partage, jamais.</p>
 </form>
 </div>
 </div>
 </section>
 <!-- CTA Banner -->
 <section class="cta-banner">
+<div class="cta-glow" aria-hidden="true"></div>
 <div class="container cta-inner">
-<h2>Prêt à voir la différence ?</h2>
-<p>Demandez votre devis gratuit maintenant. Réponse en moins de 24 heures.</p>
+<span class="cta-tag"><svg class="icon icon-xs"><use href="#icon-star"/></svg> Noté 5 / 5 sur Google</span>
+<h2>Prêt à voir vos vitres<br>sous un jour neuf ?</h2>
+<p>Demandez votre devis gratuit dès maintenant — réponse en moins de 24 heures, sans engagement.</p>
 <div class="cta-actions">
 <a href="#contact" class="btn btn-primary">Obtenir un devis gratuit</a>
-<a href="tel:+15149236906" class="btn btn-outline-light"><svg class="icon icon-sm" style="vertical-align:middle;margin-right:6px"><use href="#icon-phone"/></svg> 514-923-6906</a>
+<a href="tel:+15149236906" class="btn btn-outline-light"><svg class="icon icon-sm" style="vertical-align:middle;margin-right:8px"><use href="#icon-phone"/></svg> 514-923-6906</a>
 </div>
+<ul class="cta-reassure">
+<li><svg class="icon icon-xs"><use href="#icon-check"/></svg> Devis 100 % gratuit</li>
+<li><svg class="icon icon-xs"><use href="#icon-check"/></svg> Sans frais cachés</li>
+<li><svg class="icon icon-xs"><use href="#icon-check"/></svg> Satisfait ou remboursé</li>
+</ul>
 </div>
 </section>
 </main>
@@ -710,31 +712,49 @@
 <div class="container">
 <div class="footer-grid">
 <div class="footer-brand">
-<h3>Lumiaura<span>.</span></h3>
-<p>Services de lavage professionnel à Montréal. Lavage de vitres résidentiel et commercial, nettoyage de gouttières, lavage à pression, lavage de revêtement. Résidentiel et commercial.</p>
+<a href="#" class="footer-logo"><img src="assets/images/logo-tight.png" alt="Lumiaura" width="150"></a>
+<p>Lavage professionnel à Montréal : vitres résidentiel et commercial, gouttières, lavage à pression et de revêtement. Un travail soigné, garanti.</p>
+<a class="footer-rating" href="https://maps.app.goo.gl/21ME8Xup1hRZbeRLA" target="_blank" rel="noopener">
+<span class="footer-stars"><svg class="icon icon-xs"><use href="#icon-star"/></svg><svg class="icon icon-xs"><use href="#icon-star"/></svg><svg class="icon icon-xs"><use href="#icon-star"/></svg><svg class="icon icon-xs"><use href="#icon-star"/></svg><svg class="icon icon-xs"><use href="#icon-star"/></svg></span>
+<strong>5 / 5</strong> sur Google
+</a>
 </div>
-<div class="footer-contact">
-<h4>Contact</h4>
+
+<div class="footer-col">
+<h4>Services</h4>
 <ul>
-<li><a href="tel:+15149236906"><svg class="icon icon-xs" style="vertical-align:middle;margin-right:6px"><use href="#icon-phone"/></svg> 514-923-6906</a></li>
-<li><a href="mailto:lumiaura1@outlook.com"><svg class="icon icon-xs" style="vertical-align:middle;margin-right:6px"><use href="#icon-mail"/></svg> lumiaura1@outlook.com</a></li>
-<li><span><svg class="icon icon-xs" style="vertical-align:middle;margin-right:6px"><use href="#icon-map-pin"/></svg> Grande région de Montréal</span></li>
+<li><a href="#services">Vitres résidentiel</a></li>
+<li><a href="#services">Vitres commercial</a></li>
+<li><a href="#services">Nettoyage de gouttières</a></li>
+<li><a href="#services">Lavage à pression</a></li>
+<li><a href="#services">Lavage de revêtement</a></li>
 </ul>
 </div>
-<div class="footer-links">
+
+<div class="footer-col">
 <h4>Navigation</h4>
 <ul>
-<li><a href="#services">Services</a></li>
 <li><a href="#pourquoi">Pourquoi nous</a></li>
 <li><a href="#galerie">Galerie</a></li>
-<li><a href="#faq">FAQ</a></li>
 <li><a href="#temoignages">Avis clients</a></li>
-<li><a href="https://maps.app.goo.gl/21ME8Xup1hRZbeRLA" target="_blank" rel="noopener">Google Reviews</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Obtenir un devis</a></li>
+</ul>
+</div>
+
+<div class="footer-col footer-contact">
+<h4>Contact</h4>
+<ul>
+<li><a href="tel:+15149236906"><svg class="icon icon-sm"><use href="#icon-phone"/></svg><span>514-923-6906</span></a></li>
+<li><a href="mailto:lumiaura1@outlook.com"><svg class="icon icon-sm"><use href="#icon-mail"/></svg><span>lumiaura1@outlook.com</span></a></li>
+<li><span class="footer-static"><svg class="icon icon-sm"><use href="#icon-map-pin"/></svg><span>Grande région de Montréal</span></span></li>
+<li><span class="footer-static"><svg class="icon icon-sm"><use href="#icon-shield"/></svg><span>Assuré &amp; garanti</span></span></li>
 </ul>
 </div>
 </div>
 <div class="footer-bottom">
-<p>&copy; 2026 Lumiaura. Tous droits réservés.</p>
+<p>&copy; 2026 Lumiaura — Lavage de vitres. Tous droits réservés.</p>
+<p class="footer-made">Fièrement au service de Montréal <span aria-hidden="true">·</span> Satisfait ou remboursé</p>
 </div>
 </div>
 </footer>
@@ -787,66 +807,75 @@
     }
   });
 })();
-(function(){var v=document.getElementById('heroVideo');var btn=document.getElementById('heroPlayBtn');if(!v)return;v.loop=true;v.muted=true;function tryPlay(){return v.play().then(function(){if(btn)btn.classList.remove('visible');}).catch(function(){if(btn)btn.classList.add('visible');});}v.addEventListener('loadedmetadata',tryPlay);tryPlay();if(btn){btn.addEventListener('click',function(){v.muted=true;tryPlay();});}})();
+(function(){
+  var v = document.getElementById('heroVideo');
+  var btn = document.getElementById('heroPlayBtn');
+  if (!v) return;
+  v.loop = true;
+  v.muted = true;
+  function updateBtn() {
+    if (!btn) return;
+    if (v.paused) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }
+  v.addEventListener('play', updateBtn);
+  v.addEventListener('pause', updateBtn);
+  v.addEventListener('loadedmetadata', function() {
+    v.play().catch(function(){});
+  });
+  v.play().catch(function(){});
+  updateBtn();
+  if (btn) {
+    btn.addEventListener('click', function() {
+      v.muted = true;
+      v.play().catch(function(){});
+    });
+  }
+})();
 
 // Force play all videos on mobile (iOS blocks autoplay sometimes)
 (function(){document.addEventListener('touchstart',function(){document.querySelectorAll('video[autoplay]').forEach(function(v){v.play().catch(function(){});});},{once:true});})();
 (function(){document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}});});})();
 
-// Live preview of form data
-(function(){
-  var form = document.getElementById('quoteForm');
-  if(!form) return;
-  var preview = document.getElementById('formPreview');
-  var content = document.getElementById('previewContent');
-  function updatePreview(){
-    var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
-    var email = document.getElementById('email').value;
-    var address = document.getElementById('address').value;
-    var message = document.getElementById('message').value;
-    var services = [];
-    document.querySelectorAll('input[name="service"]:checked').forEach(function(cb){ services.push(cb.value); });
-    if(name || phone || email || address || services.length || message){
-      preview.style.display = 'block';
-      content.innerHTML = 
-        '<div class="preview-row"><span class="preview-label">Nom</span><span class="preview-value">'+(name||'—')+'</span></div>'+
-        '<div class="preview-row"><span class="preview-label">Téléphone</span><span class="preview-value">'+(phone||'—')+'</span></div>'+
-        '<div class="preview-row"><span class="preview-label">Email</span><span class="preview-value">'+(email||'—')+'</span></div>'+
-        '<div class="preview-row"><span class="preview-label">Adresse</span><span class="preview-value">'+(address||'—')+'</span></div>'+
-        '<div class="preview-row"><span class="preview-label">Services</span><span class="preview-value">'+(services.join(', ')||'—')+'</span></div>'+
-        '<div class="preview-row"><span class="preview-label">Détails</span><span class="preview-value">'+(message||'—')+'</span></div>';
-    } else {
-      preview.style.display = 'none';
-    }
-  }
-  form.addEventListener('input', updatePreview);
-  form.addEventListener('change', updatePreview);
-})();
-
 // Form submission → Email via Cloudflare Worker (Resend)
 (function(){
   var form = document.getElementById('quoteForm');
   if(!form) return;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
+  var formWrap = form.parentNode; // .quote-form
+  var defaultLabel = '<svg class="icon icon-sm" style="vertical-align:middle;margin-right:8px"><use href="#icon-mail"/></svg> Envoyer ma demande';
+
+  function esc(s){ return (s||'').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  function showNote(html){
     var note = document.getElementById('formFallback');
-    if(note) note.remove();
-    
-    var services = [];
-    document.querySelectorAll('input[name="service"]:checked').forEach(function(cb){ services.push(cb.value); });
-    if(!services.length){
-      btn.disabled = false;
-      btn.innerHTML = '<svg class="icon icon-sm" style="vertical-align:middle;margin-right:6px"><use href="#icon-mail"/></svg> Envoyer ma demande';
+    if(!note){
       note = document.createElement('div');
       note.id = 'formFallback';
       note.className = 'form-fallback';
+      note.setAttribute('role','alert');
+      var btn = form.querySelector('button[type="submit"]');
       btn.parentNode.insertBefore(note, btn.nextSibling);
-      note.innerHTML = 'Veuillez sélectionner au moins un service.';
+    }
+    note.innerHTML = html;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var old = document.getElementById('formFallback');
+    if(old) old.remove();
+
+    var services = [];
+    document.querySelectorAll('input[name="service"]:checked').forEach(function(cb){ services.push(cb.value); });
+    if(!services.length){
+      showNote('Veuillez sélectionner au moins un service.');
       return;
     }
-    btn.textContent = 'Envoi en cours...';
+
+    btn.textContent = 'Envoi en cours…';
     btn.disabled = true;
     var data = {
       name: document.getElementById('name').value,
@@ -862,31 +891,23 @@
       body: JSON.stringify(data)
     }).then(function(r){ return r.json(); }).then(function(res){
       if(res.success){
-        btn.textContent = '✅ Envoyé avec succès!';
-        setTimeout(function(){
-          btn.innerHTML = '<svg class="icon icon-sm" style="vertical-align:middle;margin-right:6px"><use href="#icon-mail"/></svg> Envoyer ma demande';
-          btn.disabled = false;
-          form.reset();
-        }, 3000);
+        var first = data.name ? data.name.trim().split(' ')[0] : '';
+        formWrap.innerHTML =
+          '<div class="form-success" role="status">'+
+            '<div class="form-success__icon"><svg class="icon"><use href="#icon-check"/></svg></div>'+
+            '<h3>Demande envoyée !</h3>'+
+            '<p>Merci'+ (first ? ' '+esc(first) : '') +'. Nous vous revenons sous 24 heures avec votre devis.</p>'+
+            '<p class="form-success__call">Besoin d’une réponse immédiate ? Appelez-nous au <a href="tel:+15149236906">514-923-6906</a>.</p>'+
+          '</div>';
       } else {
         throw new Error(res.error || 'Erreur inconnue');
       }
-    }).catch(function(err){
-      btn.textContent = '❌ Envoi impossible';
-      var note = document.getElementById('formFallback');
-      if(!note){
-        note = document.createElement('div');
-        note.id = 'formFallback';
-        note.className = 'form-fallback';
-        btn.parentNode.insertBefore(note, btn.nextSibling);
-      }
-      note.innerHTML = 'L\'envoi a échoué. Contactez-nous directement, on s\'occupe de tout : '+
+    }).catch(function(){
+      btn.innerHTML = defaultLabel;
+      btn.disabled = false;
+      showNote('L’envoi a échoué. Contactez-nous directement, on s’occupe de tout : '+
         '<a href="tel:+15149236906">514-923-6906</a> ou '+
-        '<a href="mailto:lumiaura1@outlook.com">lumiaura1@outlook.com</a>.';
-      setTimeout(function(){
-        btn.innerHTML = '<svg class="icon icon-sm" style="vertical-align:middle;margin-right:6px"><use href="#icon-mail"/></svg> Réessayer';
-        btn.disabled = false;
-      }, 3000);
+        '<a href="mailto:lumiaura1@outlook.com">lumiaura1@outlook.com</a>.');
     });
   });
 })();
@@ -1071,15 +1092,34 @@
   const slides = track ? track.querySelectorAll('.testimonial-slide') : [];
   
   if (windowEl && track && slides.length) {
+    const originalSlides = Array.from(slides);
+    const N = originalSlides.length;
+    const M = 3; // Number of clones on each side
+    
+    // Clone last M slides and prepend
+    for (let i = N - M; i < N; i++) {
+      const clone = originalSlides[i].cloneNode(true);
+      clone.classList.add('clone');
+      track.insertBefore(clone, track.firstChild);
+    }
+    
+    // Clone first M slides and append
+    for (let i = 0; i < M; i++) {
+      const clone = originalSlides[i].cloneNode(true);
+      clone.classList.add('clone');
+      track.appendChild(clone);
+    }
+    
     let currentIndex = 0;
     let isAutoPlaying = true;
     let autoPlayTimer = null;
     let autoPlayResumeTimeout = null;
-    let direction = 1;
     
     // Drag/Swipe state
     let isDragging = false;
+    let isPointerDown = false;
     let startX = 0;
+    let startY = 0;
     let startOffsetPx = 0;
     let currentDeltaX = 0;
     
@@ -1090,35 +1130,29 @@
       return 1;
     }
     
-    function getMaxIndex() {
-      return Math.max(0, slides.length - getVisibleCount());
+    function updateSliderPositionDirectly() {
+      const visible = getVisibleCount();
+      const domIndex = currentIndex + M;
+      let percent;
+      if (visible === 1) {
+        // Mobile: active slide has 84% width, leaving 8% margins on each side
+        const slideWidth = 84;
+        const margin = (100 - slideWidth) / 2;
+        percent = margin - domIndex * slideWidth;
+      } else {
+        percent = -domIndex * (100 / visible);
+      }
+      track.style.transform = `translateX(${percent}%)`;
     }
     
     function updateSlider() {
-      const visible = getVisibleCount();
-      const maxIndex = getMaxIndex();
-      
-      // Clamp index
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
-      if (currentIndex < 0) currentIndex = 0;
-      
-      const percent = -currentIndex * (100 / visible);
-      track.style.transform = `translateX(${percent}%)`;
-      
-      // Update chevrons active/disabled state
-      const canPrev = currentIndex > 0;
-      const canNext = currentIndex < maxIndex;
-      
-      const prevBtn = document.getElementById('sliderPrevBottom');
-      const nextBtn = document.getElementById('sliderNextBottom');
-      
-      if (prevBtn) prevBtn.disabled = !canPrev;
-      if (nextBtn) nextBtn.disabled = !canNext;
+      updateSliderPositionDirectly();
       
       // Update active dots
+      const activeDotIndex = (currentIndex < 0) ? (N - 1) : (currentIndex >= N ? 0 : currentIndex);
       const dots = document.querySelectorAll('.slider-dot');
       dots.forEach((dot, idx) => {
-        if (idx === currentIndex) {
+        if (idx === activeDotIndex) {
           dot.classList.add('active');
         } else {
           dot.classList.remove('active');
@@ -1126,19 +1160,35 @@
       });
     }
     
+    track.addEventListener('transitionend', () => {
+      if (currentIndex < 0) {
+        currentIndex = N - 1;
+        track.classList.add('no-transition');
+        updateSliderPositionDirectly();
+        track.offsetHeight; // force reflow
+        track.classList.remove('no-transition');
+      } else if (currentIndex >= N) {
+        currentIndex = 0;
+        track.classList.add('no-transition');
+        updateSliderPositionDirectly();
+        track.offsetHeight; // force reflow
+        track.classList.remove('no-transition');
+      }
+    });
+    
     function buildDots() {
       const dotsContainer = document.getElementById('sliderDots');
       if (!dotsContainer) return;
       dotsContainer.innerHTML = '';
       
-      const count = getMaxIndex() + 1;
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < N; i++) {
         const dot = document.createElement('button');
         dot.className = 'slider-dot';
         if (i === currentIndex) dot.classList.add('active');
         dot.setAttribute('aria-label', `Aller à l'avis ${i + 1}`);
         dot.addEventListener('click', () => {
           currentIndex = i;
+          track.classList.remove('no-transition');
           updateSlider();
           pauseAutoPlayUserInteraction();
         });
@@ -1150,16 +1200,10 @@
       if (autoPlayTimer) clearInterval(autoPlayTimer);
       autoPlayTimer = setInterval(() => {
         if (!isAutoPlaying) return;
-        const maxIndex = getMaxIndex();
-        if (maxIndex <= 0) return;
+        if (N <= 1) return;
         
-        if (currentIndex >= maxIndex) {
-          direction = -1;
-        } else if (currentIndex <= 0) {
-          direction = 1;
-        }
-        
-        currentIndex += direction;
+        currentIndex++;
+        track.classList.remove('no-transition');
         updateSlider();
       }, 4000);
     }
@@ -1174,7 +1218,6 @@
     
     // Resize Listener
     window.addEventListener('resize', () => {
-      buildDots();
       updateSlider();
     });
     
@@ -1184,21 +1227,45 @@
     
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateSlider();
-          pauseAutoPlayUserInteraction();
+        // If currently transitioning to a clone, snap to corresponding original index instantly
+        if (currentIndex < 0) {
+          currentIndex = N - 1;
+          track.classList.add('no-transition');
+          updateSliderPositionDirectly();
+          track.offsetHeight;
+        } else if (currentIndex >= N) {
+          currentIndex = 0;
+          track.classList.add('no-transition');
+          updateSliderPositionDirectly();
+          track.offsetHeight;
         }
+        
+        currentIndex--;
+        track.classList.remove('no-transition');
+        updateSlider();
+        pauseAutoPlayUserInteraction();
       });
     }
     
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
-        if (currentIndex < getMaxIndex()) {
-          currentIndex++;
-          updateSlider();
-          pauseAutoPlayUserInteraction();
+        // If currently transitioning to a clone, snap to corresponding original index instantly
+        if (currentIndex < 0) {
+          currentIndex = N - 1;
+          track.classList.add('no-transition');
+          updateSliderPositionDirectly();
+          track.offsetHeight;
+        } else if (currentIndex >= N) {
+          currentIndex = 0;
+          track.classList.add('no-transition');
+          updateSliderPositionDirectly();
+          track.offsetHeight;
         }
+        
+        currentIndex++;
+        track.classList.remove('no-transition');
+        updateSlider();
+        pauseAutoPlayUserInteraction();
       });
     }
     
@@ -1206,69 +1273,100 @@
     windowEl.addEventListener('pointerdown', (e) => {
       if (e.pointerType === 'mouse' && e.button !== 0) return;
       
-      isDragging = true;
+      // If currently transitioning to a clone, snap to corresponding original index instantly
+      if (currentIndex < 0) {
+        currentIndex = N - 1;
+        track.classList.add('no-transition');
+        updateSliderPositionDirectly();
+        track.offsetHeight;
+      } else if (currentIndex >= N) {
+        currentIndex = 0;
+        track.classList.add('no-transition');
+        updateSliderPositionDirectly();
+        track.offsetHeight;
+      }
+      
+      isPointerDown = true;
       startX = e.clientX;
-      const rect = windowEl.getBoundingClientRect();
-      const cardWidthPx = rect.width / getVisibleCount();
-      startOffsetPx = -currentIndex * cardWidthPx;
+      startY = e.clientY;
       currentDeltaX = 0;
       
-      windowEl.classList.add('grabbing');
-      track.classList.add('no-transition');
+      const rect = windowEl.getBoundingClientRect();
+      const visible = getVisibleCount();
+      const domIndex = currentIndex + M;
       
-      windowEl.setPointerCapture(e.pointerId);
+      if (visible === 1) {
+        const slideWidthPx = rect.width * 0.84;
+        const marginPx = (rect.width - slideWidthPx) / 2;
+        startOffsetPx = marginPx - domIndex * slideWidthPx;
+      } else {
+        const cardWidthPx = rect.width / visible;
+        startOffsetPx = -domIndex * cardWidthPx;
+      }
       
       isAutoPlaying = false;
       if (autoPlayResumeTimeout) clearTimeout(autoPlayResumeTimeout);
     });
     
-    windowEl.addEventListener('pointermove', (e) => {
-      if (!isDragging) return;
-      currentDeltaX = e.clientX - startX;
+    document.addEventListener('pointermove', (e) => {
+      if (!isPointerDown) return;
       
-      let offset = startOffsetPx + currentDeltaX;
+      const deltaX = e.clientX - startX;
+      const deltaY = e.clientY - startY;
       
-      const rect = windowEl.getBoundingClientRect();
-      const cardWidthPx = rect.width / getVisibleCount();
-      const minOffset = -getMaxIndex() * cardWidthPx;
-      const maxOffset = 0;
-      
-      // Elastic edge resistance
-      if (offset > maxOffset) {
-        offset = maxOffset + (offset - maxOffset) * 0.25;
-      } else if (offset < minOffset) {
-        offset = minOffset + (offset - minOffset) * 0.25;
+      if (!isDragging) {
+        // Only start dragging if horizontal movement exceeds 8px AND is greater than vertical movement
+        if (Math.abs(deltaX) > 8 && Math.abs(deltaX) > Math.abs(deltaY)) {
+          isDragging = true;
+          windowEl.classList.add('grabbing');
+          track.classList.add('no-transition');
+          try {
+            windowEl.setPointerCapture(e.pointerId);
+          } catch (err) {}
+        } else if (Math.abs(deltaY) > 8) {
+          // If vertical scroll is detected, cancel pointerdown tracking
+          isPointerDown = false;
+        }
       }
       
-      track.style.transform = `translateX(${offset}px)`;
+      if (isDragging) {
+        currentDeltaX = deltaX;
+        let offset = startOffsetPx + currentDeltaX;
+        track.style.transform = `translateX(${offset}px)`;
+      }
     });
     
     const endDrag = (e) => {
-      if (!isDragging) return;
-      isDragging = false;
-      windowEl.classList.remove('grabbing');
-      track.classList.remove('no-transition');
+      if (!isPointerDown) return;
+      isPointerDown = false;
       
-      try {
-        windowEl.releasePointerCapture(e.pointerId);
-      } catch (err) {}
-      
-      const rect = windowEl.getBoundingClientRect();
-      const cardWidthPx = rect.width / getVisibleCount();
-      const threshold = cardWidthPx * 0.25;
-      
-      if (currentDeltaX > threshold && currentIndex > 0) {
-        currentIndex--;
-      } else if (currentDeltaX < -threshold && currentIndex < getMaxIndex()) {
-        currentIndex++;
+      if (isDragging) {
+        isDragging = false;
+        windowEl.classList.remove('grabbing');
+        track.classList.remove('no-transition');
+        
+        try {
+          windowEl.releasePointerCapture(e.pointerId);
+        } catch (err) {}
+        
+        const rect = windowEl.getBoundingClientRect();
+        const visible = getVisibleCount();
+        const cardWidthPx = visible === 1 ? rect.width * 0.84 : rect.width / visible;
+        const threshold = cardWidthPx * 0.25;
+        
+        if (currentDeltaX > threshold) {
+          currentIndex--;
+        } else if (currentDeltaX < -threshold) {
+          currentIndex++;
+        }
+        
+        updateSlider();
       }
-      
-      updateSlider();
       pauseAutoPlayUserInteraction();
     };
     
-    windowEl.addEventListener('pointerup', endDrag);
-    windowEl.addEventListener('pointercancel', endDrag);
+    document.addEventListener('pointerup', endDrag);
+    document.addEventListener('pointercancel', endDrag);
     
     windowEl.addEventListener('mouseenter', () => {
       if (autoPlayResumeTimeout) return;
@@ -1292,26 +1390,39 @@
   document.addEventListener('DOMContentLoaded', function() {
     var section = document.querySelector('.why-scrolly-section');
     var video = document.getElementById('scrollyVideo');
-    var cards = document.querySelectorAll('.scrolly-overlay-card');
-    if (!section || !video || !cards.length) return;
+    var steps = document.querySelectorAll('.scrolly-step');
+    if (!section || !video || !steps.length) return;
 
-    var stepCount = cards.length;
+    var stepCount = steps.length;
     var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
 
-    // Mobile ou animations reduites : lecture en boucle, tous les points visibles, pas de scrub.
-    if (prefersReduced || isMobile) {
+    // Animations reduites : lecture en boucle, tous les points visibles, pas de scrub.
+    if (prefersReduced) {
       video.muted = true;
       video.loop = true;
       video.setAttribute('autoplay', '');
       video.play().catch(function(){});
-      cards.forEach(function(c){ c.classList.add('active'); });
+      steps.forEach(function(s){ s.classList.add('active'); });
       return;
     }
 
-    // Desktop : scrub fluide cale serre sur le defilement de la souris
+    // Amorce le decodage de la video (necessaire sur iOS) puis on la garde en pause pour la scrubber
+    var primed = false;
+    function prime() {
+      if (primed) return;
+      primed = true;
+      var p = video.play();
+      if (p && p.then) {
+        p.then(function(){ video.pause(); }).catch(function(){});
+      } else {
+        try { video.pause(); } catch (e) {}
+      }
+    }
+    video.addEventListener('loadeddata', prime);
+    window.addEventListener('touchstart', prime, { once: true, passive: true });
+
+    // Scrub fluide cale serre sur le defilement (souris ou doigt) — mobile comme desktop
     var targetTime = 0;
-    var lastActiveIndex = -1;
 
     function updateVideoTime() {
       if (!isNaN(video.duration) && video.duration > 0) {
@@ -1339,14 +1450,12 @@
       if (!isNaN(video.duration) && video.duration > 0) {
         targetTime = progress * (video.duration - 0.05);
       }
-      var activeIndex = Math.min(stepCount - 1, Math.floor(progress * stepCount));
 
-      if (activeIndex !== lastActiveIndex) {
-        lastActiveIndex = activeIndex;
-        cards.forEach(function(card, index) {
-          card.classList.toggle('active', index === activeIndex);
-        });
-      }
+      // Chaque point apparait l'un apres l'autre et reste affiche (effet nuage qui monte)
+      steps.forEach(function(step, i) {
+        var threshold = (i + 1) / (stepCount + 1);
+        step.classList.toggle('active', progress >= threshold);
+      });
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true });
