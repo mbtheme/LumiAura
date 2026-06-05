@@ -237,92 +237,41 @@
 <section id="pourquoi" class="why-scrolly-section">
   <div class="scrolly-scroll-container">
     <div class="scrolly-sticky-viewport">
-      
+
       <div class="scrolly-header">
         <span class="section-tag">Pourquoi LumiAura</span>
       </div>
 
       <div class="scrolly-video-container">
-        <video id="scrollyVideo" class="scrolly-video-scrub" muted playsinline preload="auto">
+        <video id="scrollyVideo" class="scrolly-video-scrub" muted playsinline preload="auto" aria-hidden="true" tabindex="-1">
           <source src="assets/videos/scrollinganimation.mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="scrolly-overlays">
-        <!-- Step 0: Intro -->
-        <div class="scrolly-overlay-card step-0 active" data-step="0">
-          <h2>Un standard de qualité exceptionnel</h2>
-          <p>Chaque intervention est réalisée avec le même engagement : des résultats impeccables, du premier coup. Faites défiler pour découvrir comment nous faisons la différence.</p>
+        <div class="scrolly-overlay-card right-side active" data-step="0">
+          <span class="step-num-badge">01</span>
+          <h3>Soumission gratuite</h3>
+          <p>Réponse claire en moins de 24 heures, sans engagement.</p>
         </div>
-
-        <!-- Step 1: Devis -->
-        <div class="scrolly-overlay-card step-1 left-side" data-step="1">
-          <div class="step-num-badge">01</div>
-          <h3>Devis gratuits</h3>
-          <ul class="scrolly-bullets">
-            <li>Estimation claire et rapide</li>
-            <li>Aucun frais caché ni mauvaise surprise</li>
-            <li>Totalement gratuit et sans engagement</li>
-          </ul>
+        <div class="scrolly-overlay-card left-side" data-step="1">
+          <span class="step-num-badge">02</span>
+          <h3>Équipe ponctuelle, assurée à 100 %</h3>
+          <p>À l’heure à chaque rendez-vous, et entièrement assurée.</p>
         </div>
-
-        <!-- Step 2: Assurance -->
-        <div class="scrolly-overlay-card step-2 right-side" data-step="2">
-          <div class="step-num-badge">02</div>
-          <h3>Assurance complète en règle</h3>
-          <ul class="scrolly-bullets">
-            <li>Responsabilité civile complète en règle</li>
-            <li>Tranquillité d'esprit garantie</li>
-            <li>Protection complète pour chaque projet</li>
-          </ul>
+        <div class="scrolly-overlay-card right-side" data-step="2">
+          <span class="step-num-badge">03</span>
+          <h3>Tout mode de paiement accepté</h3>
+          <p>Carte, Interac ou comptant — réglé une fois le travail terminé.</p>
         </div>
-
-        <!-- Step 3: Ponctualité -->
-        <div class="scrolly-overlay-card step-3 left-side" data-step="3">
-          <div class="step-num-badge">03</div>
-          <h3>Ponctualité garantie</h3>
-          <ul class="scrolly-bullets">
-            <li>Respect absolu des heures convenues</li>
-            <li>Notification de l'équipe avant l'arrivée</li>
-            <li>Planification optimisée pour votre horaire</li>
-          </ul>
-        </div>
-
-        <!-- Step 4: Résultat -->
-        <div class="scrolly-overlay-card step-4 right-side" data-step="4">
-          <div class="step-num-badge">04</div>
-          <h3>Résultat impeccable</h3>
-          <ul class="scrolly-bullets">
-            <li>Fini brillant sans aucune trace ni cerne</li>
-            <li>Vitres si propres qu'elles semblent invisibles</li>
-            <li>Redonne éclat et valeur à votre demeure</li>
-          </ul>
-        </div>
-
-        <!-- Step 5: Eau purifiée -->
-        <div class="scrolly-overlay-card step-5 left-side" data-step="5">
-          <div class="step-num-badge">05</div>
-          <h3>Eau purifiée</h3>
-          <ul class="scrolly-bullets">
-            <li>Lavage écologique par osmose inverse</li>
-            <li>Séchage naturel et 100% propre</li>
-            <li>Aucun détergent ni résidu chimique</li>
-          </ul>
-        </div>
-
-        <!-- Step 6: Garantie -->
-        <div class="scrolly-overlay-card step-6 right-side" data-step="6">
-          <div class="step-num-badge">06</div>
-          <h3>Garantie 24 heures</h3>
-          <ul class="scrolly-bullets">
-            <li>Satisfait ou ré-intervenu sans frais</li>
-            <li>Garantie de qualité de premier plan</li>
-            <li>Votre entière satisfaction est notre priorité</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary btn-cta-scroll">Estimer mon projet</a>
+        <div class="scrolly-overlay-card left-side" data-step="3">
+          <span class="step-num-badge">04</span>
+          <h3>Satisfait ou remboursé à 100 %</h3>
+          <p>Pas satisfait du résultat ? On revient gratuitement.</p>
+          <a href="#contact" class="btn btn-primary btn-cta-scroll">Obtenir un devis gratuit</a>
         </div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -1346,96 +1295,63 @@
     var cards = document.querySelectorAll('.scrolly-overlay-card');
     if (!section || !video || !cards.length) return;
 
+    var stepCount = cards.length;
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
+    // Mobile ou animations reduites : lecture en boucle, tous les points visibles, pas de scrub.
+    if (prefersReduced || isMobile) {
+      video.muted = true;
+      video.loop = true;
+      video.setAttribute('autoplay', '');
+      video.play().catch(function(){});
+      cards.forEach(function(c){ c.classList.add('active'); });
+      return;
+    }
+
+    // Desktop : scrub fluide cale serre sur le defilement de la souris
     var targetTime = 0;
     var lastActiveIndex = -1;
 
-    // Smooth scrub interpolation loop
     function updateVideoTime() {
       if (!isNaN(video.duration) && video.duration > 0) {
         var diff = targetTime - video.currentTime;
-        if (Math.abs(diff) > 0.02) {
-          // Clamp target time to stay within video duration bounds
-          video.currentTime = Math.max(0, Math.min(video.duration - 0.05, video.currentTime + diff * 0.18));
+        if (Math.abs(diff) > 0.015) {
+          // Suivi rapide mais lisse (glissement)
+          video.currentTime = Math.max(0, Math.min(video.duration - 0.05, video.currentTime + diff * 0.32));
         } else {
           video.currentTime = targetTime;
         }
       }
       requestAnimationFrame(updateVideoTime);
     }
-    
-    // Start smooth loop
     requestAnimationFrame(updateVideoTime);
 
     function handleScroll() {
-      var isMobile = window.innerWidth <= 768;
-      var activeIndex = 0;
+      var rect = section.getBoundingClientRect();
+      var sectionHeight = rect.height;
+      var sectionTop = rect.top + window.pageYOffset;
+      var scrollY = window.pageYOffset;
+      var windowHeight = window.innerHeight;
+      var progress = (scrollY - sectionTop) / (sectionHeight - windowHeight);
+      progress = Math.max(0, Math.min(1, progress));
 
-      if (!isMobile) {
-        // Desktop Scroll Scrubbing
-        var rect = section.getBoundingClientRect();
-        var sectionHeight = rect.height;
-        var sectionTop = rect.top + window.pageYOffset;
-        var scrollY = window.pageYOffset;
-        var windowHeight = window.innerHeight;
-        
-        var progress = (scrollY - sectionTop) / (sectionHeight - windowHeight);
-        progress = Math.max(0, Math.min(1, progress));
-
-        if (!isNaN(video.duration) && video.duration > 0) {
-          targetTime = progress * (video.duration - 0.05); // Keep a small margin at the end
-        }
-
-        // Determine active step card based on progress regions
-        var thresholds = [0.08, 0.23, 0.38, 0.53, 0.68, 0.83, 1.0];
-        for (var i = 0; i < thresholds.length; i++) {
-          if (progress <= thresholds[i]) {
-            activeIndex = i;
-            break;
-          }
-        }
-      } else {
-        // Mobile Layout: Card selection based on center alignment
-        var triggerPoint = window.innerHeight * 0.55;
-        var minDiff = Infinity;
-        
-        cards.forEach(function(card, index) {
-          var r = card.getBoundingClientRect();
-          var cardCenter = r.top + r.height / 2;
-          var diff = Math.abs(cardCenter - triggerPoint);
-          if (diff < minDiff) {
-            minDiff = diff;
-            activeIndex = index;
-          }
-        });
-
-        // Set video scrubbing based on the active step
-        if (!isNaN(video.duration) && video.duration > 0) {
-          var mobileProgress = activeIndex / (cards.length - 1);
-          targetTime = mobileProgress * (video.duration - 0.05);
-        }
+      if (!isNaN(video.duration) && video.duration > 0) {
+        targetTime = progress * (video.duration - 0.05);
       }
+      var activeIndex = Math.min(stepCount - 1, Math.floor(progress * stepCount));
 
-      // Update active classes
       if (activeIndex !== lastActiveIndex) {
         lastActiveIndex = activeIndex;
         cards.forEach(function(card, index) {
-          if (index === activeIndex) {
-            card.classList.add('active');
-          } else {
-            card.classList.remove('active');
-          }
+          card.classList.toggle('active', index === activeIndex);
         });
       }
     }
 
-    // Bind scroll and resize listeners
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleScroll);
-
-    // Initial trigger
-    setTimeout(function() {
-      handleScroll();
-    }, 100);
+    setTimeout(handleScroll, 100);
   });
 })();
 
